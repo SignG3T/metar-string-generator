@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metar String Generator | SignG3T</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <!-- Input Section -->
+    <section class="form-section">
+      <h1>METAR Generator</h1>
+      <form id="metar-form">
+        <h2>Enter METAR Data</h2>
+      
+        <!-- Airport or weather station -->
+        <label for="iaco">Airport or Weather Station (ICAO Code):</label>
+        <input type="text" id="icao" name="icao" placeholder="e.g., LIML" >
+
+        <!-- Day -->
+        <label for="day">Day of Month</label>
+        <input type="number" id="day" name="day" placeholder="e.g., 05" min="1" max="31" >
+
+        <!-- Time -->
+        <label for="time">UTC Time (hhmm)</label>
+        <input type="number" id="time" name="time" placeholder="e.g., 1600" >
+
+        <!-- Wind Speed -->
+        <label for="wind-speed">Wind Speed (kt):</label>
+        <input type="number" id="wind-speed" name="windSpeed" placeholder="e.g., 10" >
+      
+        <!-- Wind Direction -->
+        <label for="wind-direction">Wind Direction (°):</label>
+        <input type="number" id="wind-direction" name="windDirection" placeholder="e.g., 270" min="0" max="360" >
+
+        <!-- Visibility -->
+        <label for="visibility">Visibility (m):</label>
+        <input type="number" id="visibility" name="visibility" placeholder="e.g., 10000" >
+
+        <!-- Cloud Coverage -->
+        <label for="clouds">Cloud Coverage:</label>
+        <select id="clouds" name="clouds" >
+          <option value="">Select</option>
+          <option value="SKC">Clear Sky (SKC)</option>
+          <option value="FEW">Few Clouds (FEW)</option>
+          <option value="SCT">Scattered Clouds (SCT)</option>
+          <option value="BKN">Broken Clouds (BKN)</option>
+          <option value="OVC">Overcast (OVC)</option>
+          <option value="OVC">Not Significat Clouds (NSC)</option>
+        </select>
+
+        <!-- Temperature -->
+        <label for="temperature">Temperature (°C):</label>
+        <input type="number" id="temperature" name="temperature" placeholder="e.g., 20" >
+
+        <!-- dewpoint -->
+        <label for="dewpoint">Dewpoint (°C):</label>
+        <input type="number" id="dewpoint" name="dewpoint" placeholder="e.g., 10" >
+
+        <!-- Weather Conditions -->
+        <label for="weather">Weather Conditions:</label>
+        <select id="weather" name="weather" >
+          <option value="">Select</option>
+          <option value="RA">Rain (RA)</option>
+          <option value="SN">Snow (SN)</option>
+          <option value="FG">Fog (FG)</option>
+          <option value="TS">Thunderstorm (TS)</option>
+          <option value="HZ">Haze (HZ)</option>
+          <option value="BR">Mist (BR)</option>
+          <option value="CL">Clear Sky (CL)</option>
+        </select>
+    
+        <!-- Atmospheric Pressure -->
+        <label for="pressure">Atmospheric Pressure (hPa):</label>
+        <input type="number" id="pressure" name="pressure" placeholder="e.g., 1013" >
+      
+        <!-- Generate Button -->
+        <button type="button" id="generate-btn" class="btn btn-primary">Generate METAR</button>
+      </form>
+      
+    </section>
+
+    <!-- Output Section -->
+    <section class="output-section">
+      <h2>Generated METAR</h2>
+      <div id="metar-output" class="output-box">-- Generated METAR will appear here --</div>
+      <button id="copy-btn" class="btn btn-secondary">Copy to Clipboard</button>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
