@@ -12,14 +12,14 @@ A simple website that allows you to generate METAR strings by entering the desir
 - **Quick copy**: Allows you to copy the generated METAR string with one click.
 
 ## Screenshot
-<!-- [Website Example](./screenshot.png) -->
-Work In Progress
+![image1](https://github.com/SignG3T/metar-string-generator/blob/dev/image.png?raw=true)
+![image2](https://github.com/SignG3T/metar-string-generator/blob/dev/image2.jpg?raw=true)
 
 ## How to Use
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/metar-encoder.git
+   git clone https://github.com/SignG3T/metar-string-generator.git
    ```
 2. Open the `index.html` file in your browser.
 3. Fill out the form with the desired data (e.g., wind speed, temperature, etc.).
