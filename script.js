@@ -42,11 +42,12 @@ document.getElementById('generate-btn').addEventListener('click', () => {
   const nosigValue = document.getElementById('nosig').checked;
   const nosig = nosigValue ? "NOSIG" : "";
 
-  const metar = `METAR ${icao} ${day}${time}Z ${windSpeed}${windDirection} ${visibility} ${clouds} ${temperature}/${dewpoint} ${weather} Q${pressure} ${nosig}`
+  const metar = `METAR ${icao} ${day}${time}Z ${windSpeed}${windDirection} ${visibility} ${clouds} ${temperature}/${dewpoint} ${weather} Q${pressure} ${nosig}`.toUpperCase();
 
   document.getElementById('metar-output').textContent = metar;
 
-  addToHistory(metar)
+  addToHistory(metar);
+  showHistory();
 })
 
 document.getElementById('copy-btn').addEventListener('click', () => {
@@ -55,6 +56,21 @@ document.getElementById('copy-btn').addEventListener('click', () => {
   if(output === "-- Generated METAR will appear here --") {
     alert("Please generate a METAR first");
   } else {
-  navigator.clipboard.writeText(output);
-}
+    navigator.clipboard.writeText(output);
+  }
+})
+
+document.getElementById('download-btn').addEventListener('click', () => {
+  if(output === "-- Generated METAR will appear here --") {
+    alert("Please generate a METAR first");
+  } else{
+    const output = document.getElementById('metar-output').textContent;
+    const blob = new Blob([output], {type: 'text/plain'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'metar_output.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+  }
 })
