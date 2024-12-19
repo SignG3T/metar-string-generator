@@ -1,4 +1,4 @@
-[# metar-string-generator
+# metar-string-generator
 
 # METAR Encoder
 
@@ -19,7 +19,7 @@ A simple website that allows you to generate METAR strings by entering the desir
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/metar-encoder.git
+   git clone https://github.com/SignG3T/metar-string-generator.git
    ```
 2. Open the `index.html` file in your browser.
 3. Fill out the form with the desired data (e.g., wind speed, temperature, etc.).
@@ -76,4 +76,3 @@ This project is distributed under the MIT license. For more information, see the
 For any questions or reports:
 - Email: [nicolodaniello8@gmail.com](mailto:nicolodaniello8@gmail.com)
 - GitHub: [https://github.com/SignG3T](https://github.com/SignG3T)
-](https://github.com/SignG3T/metar-string-generator.git)
