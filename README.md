@@ -1,4 +1,4 @@
-# metar-string-generator
+[# metar-string-generator
 
 # METAR Encoder
 
@@ -76,3 +76,4 @@ This project is distributed under the MIT license. For more information, see the
 For any questions or reports:
 - Email: [nicolodaniello8@gmail.com](mailto:nicolodaniello8@gmail.com)
 - GitHub: [https://github.com/SignG3T](https://github.com/SignG3T)
+](https://github.com/SignG3T/metar-string-generator.git)
