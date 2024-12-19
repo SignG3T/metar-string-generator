@@ -214,21 +214,45 @@ input:focus {
 }
 
 .history {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .history h3 {
-  font-size: 1.2rem;
-  color: #333;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .history ul {
   list-style: none;
   padding: 0;
-  font-size: 0.875rem;
-  color: #555;
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin: 0;
 }
+
+.history ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.history ul li:hover {
+  background-color: #ecf0f1;
+}
+
+.history ul li:last-child {
+  border-bottom: none;
+}
+
 
 .share-buttons {
   margin-top: 1rem;
