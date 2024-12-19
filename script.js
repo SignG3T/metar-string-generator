@@ -10,8 +10,19 @@ document.getElementById('generate-btn').addEventListener('click', () => {
   const dewpoint = document.getElementById('dewpoint').value;
   const weather = document.getElementById('weather').value;
   const pressure = document.getElementById('pressure').value;
+  const nosigValue = document.getElementById('nosig').checked;
+  const nosig = nosigValue ? "NOSIG" : "";
 
-  const metar = `METAR ${icao} ${day}${time}Z ${windSpeed}${windDirection} ${visibility} ${clouds} ${temperature}/${dewpoint} ${weather} Q${pressure}`
+  const metar = `METAR ${icao} ${day}${time}Z ${windSpeed}${windDirection} ${visibility} ${clouds} ${temperature}/${dewpoint} ${weather} Q${pressure} ${nosig}`
 
   document.getElementById('metar-output').textContent = metar;
+})
+
+document.getElementById('copy-btn').addEventListener('click', () => {
+  const output = document.getElementById('metar-output').textContent;
+  if(output === "-- Generated METAR will appear here --") {
+    alert("Please generate a METAR first");
+  } else {
+  navigator.clipboard.writeText(output);
+}
 })
