@@ -61,10 +61,10 @@ document.getElementById('copy-btn').addEventListener('click', () => {
 })
 
 document.getElementById('download-btn').addEventListener('click', () => {
+  const output = document.getElementById('metar-output').textContent;
   if(output === "-- Generated METAR will appear here --") {
     alert("Please generate a METAR first");
   } else{
-    const output = document.getElementById('metar-output').textContent;
     const blob = new Blob([output], {type: 'text/plain'});
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
